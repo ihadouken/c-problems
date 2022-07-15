@@ -3,8 +3,8 @@
 
 #define MAXWORDS 1024
 int main() {
-    int c, i, nwhite, nother;
-    nwhite = nother = 0;
+    int c, i, nwhite, nother, wc;
+    nwhite = nother = wc = 0;
     int ndigs[10];
 
     for (i = 0; i < 10; ++i)

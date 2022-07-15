@@ -9,6 +9,7 @@ int main() {
     state = OUT;
 
     double nc, nb, nt, nw, nl;
+    nc = nb = nt = nw = nl = 0;
 
     while ((c = getchar()) != EOF) {
         ++nc;

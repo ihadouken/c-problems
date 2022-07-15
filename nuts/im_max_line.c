@@ -47,8 +47,7 @@ int main() {
     }
 
     if (max > MAXLEN) {
-            printf("[ERROR]: Buffer of size %d", MAXLEN);
-            printf(" overflowed by %d\n", max-MAXLEN);
+            printf("[ERROR]: Buffer of size %d overflowed by %d\n", MAXLEN, max-MAXLEN);
             /* printf("%d extra characters given!\n", max-MAXLEN+1); */
     }
 
