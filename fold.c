@@ -1,46 +1,58 @@
 #include <stdio.h>
-/* takes multiple lines as input and returns the largest one */
+/* folds a long line into smaller lines at the last blank character
+ * before a farthest permitted column */
 
-#define MAXLEN 128
-#define WIDTH 10
+int get_blank(char line[], int len);
+
+#define MAXCOL 8
+#define NO_BLANK -1
 #define TABSPC 4
  
 int main() {
-    int pos, col;
-    char line[WIDTH];
+    int pos, col, c, i, j, blank;
+    char line[MAXCOL];
 
     pos = col = 0;
     while ((c=getchar()) != EOF) {
-        if (col < WIDTH) {
-            line[pos++] = c;
-        }
-        else {
-            
+        if (c == ' ' && pos == 0)
+            continue;
+
+        line[pos++] = c;
+        col++;
+
+        if (col >= MAXCOL || c == '\n') {
+            blank = get_blank(line, pos);
+
+            if (blank == NO_BLANK) {
+                for (i=0; i<pos; ++i)
+                    putchar(line[i]);
+                col = pos = 0;
+            }
+
+            else {
+                for (i=0; i<blank; ++i)
+                    putchar(line[i]);
+
+                for (i=0, j=blank+1, col=0; j<pos; ++i, ++col, ++j)
+                    line[i] = line[j];
+                pos = i;
+            }
+            putchar('\n');
         }
     }
 
-/* getline: reads a line into provided char array 's', return its length */
-int getline(char s[], int limit) {
-    int c,i;
-
-    /* accept input line < maximum chars. (thus terminating at '\n') */
-    for (i = 0; i<limit-1 && (c=getchar())!=EOF && c!='\n'; ++i) 
-        s[i] = c;
-    /* add '\n' at end 's' as it holds a line in it */
-    if (c == '\n') {
-        s[i] = c;
-        ++i;
-    }
-    /* NULL character to mark end of string */
-    s[i] = '\0';
-    return i;
+    return 0;
 }
 
-/* copy: copy 'from' to 'to' (assuming its big enough) */
-void copy(char from[], char to[]) {
-    int i;
+int get_blank(char line[], int len) {
+    int blankpos;
+    blankpos = len-1;
 
-    i = 0;
-    while ((to[i] = from [i]) != '\0')
-        ++i;
+    while (blankpos > 0) {
+        if (line[blankpos] == ' ' || line[blankpos] == '\t' || line[blankpos] == '\n')
+            return blankpos;
+        --blankpos;
+    }
+
+    return NO_BLANK;
 }
