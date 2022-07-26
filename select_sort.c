@@ -22,7 +22,7 @@ void select_sort(int arr[], int size) {
     for (i=0; i<size; ++i) {
         min = i;
 
-        for (j=i; j<size; ++j) {
+        for (j=i+1; j<size; ++j) {
             if (arr[min] > arr[j])
                 min = j;
         }
