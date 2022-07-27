@@ -19,7 +19,7 @@ int main(void) {
 
 void select_sort(int arr[], int size) {
     int min, i, j, temp;
-    for (i=0; i<size; ++i) {
+    for (i=0; i<size-1; ++i) {
         min = i;
 
         for (j=i+1; j<size; ++j) {
