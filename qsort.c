@@ -1,12 +1,12 @@
 #include <stdio.h>
-/* divide sort */
+/* quick sort */
 
 void quick_sort(int arr[], int beg, int end);
 int divide(int arr[], int beg, int end);
 
 int main(void) {
     int arr[] = {9, 7, 5, 11, 12, 2, 14, 3, 10, 6};
-    int i, len = 10;
+    int i, len = sizeof(arr)/sizeof(arr[0]);
 
     quick_sort(arr, 0, len-1);
     

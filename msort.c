@@ -6,7 +6,7 @@ void merge(int arr[], int beg, int mid, int end);
 
 int main(void) {
     int arr[] = {9, 7, 5, 11, 12, 2, 14, 3, 10, 6};
-    int i, len = 10;
+    int i, len = sizeof(arr)/sizeof(arr[0]);
 
     merge_sort(arr, 0, len-1);
     
