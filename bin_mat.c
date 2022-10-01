@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-/* receive a binary matrix and print its
+/* receive a N*N binary matrix and print its
  * unique rows (madii's request) */
 
 /* auxillary fumctions:
