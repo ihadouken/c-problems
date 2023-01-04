@@ -13,9 +13,7 @@ int main() {
 
         for (j = 0; j < len-(i+1); ++j) {
             if (nums[j] > nums[j+1]) {
-                printf("interchanging %d with %d\n", nums[j], nums[j+1]);
-                getchar();
-                printf("hello world");
+                printf("Interchanging %d with %d\n", nums[j], nums[j+1]);
                 nums[j] = nums[j] + nums[j+1];
                 nums[j+1] = nums[j] - nums[j+1];
                 nums[j] = nums[j] - nums[j+1];
@@ -27,9 +25,10 @@ int main() {
             break;
     }
 
+    printf("Elements: ");
     for (i = 0; i < len; ++i) {
-        printf("%d). %d\n", i+1, nums[i]);
+        printf("%d ", nums[i]);
     }
+    putchar('\n');
     return 0;
 }
-
