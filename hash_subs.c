@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAXCHAR 128
-/* prepares a list of substrings of a string of given length and computes hash for each (recommended by madii) */
+/* prepares a list of substrings of a string of given length and computes hash for each */
 
 /* hash -> outputs hash for string of given length
  * str2int -> converts numeric strings to integers*/
@@ -19,20 +19,20 @@ int main(int argc, char** argv) {
     /* copy cmd-line string to buffer and computed length*/
     while ((str[len] = argv[1][len]) != '\0')
         ++len;
-    
+
     sublen = str2int(argv[2]);
     num_subs = len - sublen + 1;
-    
+
     /* matrix to store substrings */
     char substrs[num_subs][sublen+1];
-    
+
     /* creating substrings */
     for (i=0; i<num_subs; ++i) {
         for (j=0; j<sublen; ++j)
             substrs[i][j] = str[i+j];
         substrs[i][j] = '\0';
     }
-    
+
     /* print hash for every substring */
     for (i=0; i<num_subs; ++i) {
         printf("%d) %s -> %d\n", i+1, substrs[i], hash(substrs[i], sublen));
@@ -46,7 +46,7 @@ int hash(char key[], int len) {
     mod = 1e9 + 9;
     hash = 0;
     /*long exp = 1;*/
-    
+
     for (i=0; i<len; ++i) {
         /* uses horner's method */
         hash = (hash * base + (key[i] - 'a')) % mod;

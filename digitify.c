@@ -1,5 +1,5 @@
 #include <stdio.h>
-/* calculate individual digits for a number and stores into array (helping madii) */
+/* calculate individual digits for a number and stores into array */
 
 int main() {
     int num, len, i;
@@ -21,8 +21,8 @@ int main() {
         digits[i] = digits[i] + digits[len-1-i];
         digits[len-1-i] = digits[i] - digits[len-1-i];
         digits[i] = digits[i] - digits[len-1-i];
-    } 
-    
+    }
+
     /* printing of digits */
     printf("digits:\t");
     for (i=0; i<len-1; ++i) {
@@ -31,4 +31,3 @@ int main() {
     printf("%d\n", digits[len-1]);
     return 0;
 }
-

@@ -1,5 +1,5 @@
 #include <stdio.h>
-/* prints N rows of pascal's triangle (recommended by madii) */
+/* prints N rows of pascal's triangle */
 
 /* function that prints 'n' rows of pascal's triangle */
 void print_pascal(int n);
@@ -16,10 +16,10 @@ int main() {
 }
 
 void print_pascal(int n) {
-    /* vars: 
+    /* vars:
      *      line -> current line num.
      *      j -> index of a num. in row
-     *      ncr -> calculation of combination(n, r) 
+     *      ncr -> calculation of combination(n, r)
      *      width -> space to print a num. (formatting) */
     int line, j, ncr, width;
 
@@ -48,6 +48,6 @@ void print_pascal(int n) {
         }
 
         /* end line after printing row */
-        putchar('\n'); 
+        putchar('\n');
     }
 }

@@ -42,7 +42,7 @@ int main()
                 pids[j] = pids[j] - pids[j+1];
             }
         }
-        
+
         if (state == sorted)
             break;
     }
@@ -56,7 +56,7 @@ int main()
             turns[i] = waits[i] + bt[i];
         }
     }
-    
+
     printf("\n\nOUTPUT: \nPID\tBurts\tWaits\tTurns\n");
     for (i = 0; i < n; i++) {
         printf("%c\t%d\t%d\t%d\n", pids[i], bt[i], waits[i], turns[i]);

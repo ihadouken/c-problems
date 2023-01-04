@@ -38,4 +38,4 @@ int trap(int *height, int heightSize) {
         }
     }
     return stored;
-}   
+}

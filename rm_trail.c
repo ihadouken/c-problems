@@ -4,8 +4,8 @@
 #define MAXLEN 128
 #define IN 1
 #define OUT 0
- 
-/* declaration of functions : 
+
+/* declaration of functions :
  * getsline(to get lines of input)
  * copy(to save longest line) */
 int getsline(char line[], int maxchar);
@@ -29,7 +29,7 @@ int getsline(char s[], int limit) {
     nw = 0;
     p = 50;
     state = IN;
-    
+
     /* accept input line < maximum chars. (thus terminating at '\n') */
     for (i = 0; i<limit-1 && (c=getchar())!=EOF && c!='\n'; ++i) {
         if ((p!=' ' && p!='\n' && p!='\t') || (c!=' ' && c!='\n' && c!='\t')) {

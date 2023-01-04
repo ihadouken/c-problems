@@ -2,8 +2,8 @@
 /* takes multiple lines as input and returns the largest one */
 
 #define MAXLEN 128
- 
-/* declaration of functions : 
+
+/* declaration of functions :
  * getline(to get lines of input)
  * copy(to save longest line) */
 int getline(char line[], int maxchar);
@@ -22,7 +22,7 @@ int main() {
             copy(line, longest);
         }
     }
-    
+
     if (max > 0) /* if a line was given */
         printf("\nLongest: %s", longest);
     return 0;
@@ -33,7 +33,7 @@ int getline(char s[], int limit) {
     int c,i;
 
     /* accept input line < maximum chars. (thus terminating at '\n') */
-    for (i = 0; i<limit-1 && (c=getchar())!=EOF && c!='\n'; ++i) 
+    for (i = 0; i<limit-1 && (c=getchar())!=EOF && c!='\n'; ++i)
         s[i] = c;
     /* add '\n' at end 's' as it holds a line in it */
     if (c == '\n') {

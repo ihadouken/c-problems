@@ -9,7 +9,7 @@ int main(void) {
     int i, len = sizeof(arr)/sizeof(arr[0]);
 
     quick_sort(arr, 0, len-1);
-    
+
     for (i = 0; i < len; ++i)
         printf(" %d,", arr[i]);
     return 0;
@@ -31,7 +31,7 @@ int divide(int arr[], int beg, int end) {
     int pivot, i, j, temp;
     pivot = arr[end];
     i = j = beg;
-    
+
     while (j < end) {
         if (arr[j] > pivot)
             ;

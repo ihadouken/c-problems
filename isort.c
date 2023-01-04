@@ -27,7 +27,7 @@ void isort(int arr[], int size) {
 
         /* save value of element to be sorted */
         key = arr[i];
-        
+
         /* starting from element to left of key
          * upto first element */
         for (j = i-1; j >= 0; --j) {
@@ -38,7 +38,7 @@ void isort(int arr[], int size) {
                 arr[j+1] = arr[j];
 
             /* stop when an element is smaller */
-            else 
+            else
                 break;
         }
 

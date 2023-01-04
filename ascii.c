@@ -4,7 +4,7 @@
 int main() {
     int c;
     int val;
-    
+
     printf("Please enter your character: ");
     c = getchar();
 

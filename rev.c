@@ -11,7 +11,7 @@ int main() {
     char string[MAXLEN];
     while ((len=getsline(string, MAXLEN)) > 0) {
         if (string[0] == '\n') {
-            printf("\n");   
+            printf("\n");
         }
         else {
             reverse(string, len);
@@ -27,7 +27,7 @@ int getsline(char str[], int lim) {
         str[i] = c;
 
     if (i==0 && c=='\n') {
-        str[i] = '\n';    
+        str[i] = '\n';
         ++i;
     }
     str[i] = '\0';

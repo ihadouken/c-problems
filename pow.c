@@ -14,7 +14,7 @@ int main()
         /*printf("%d  %.4f  %.4f\n", i, expo(2, i), expo(-3, i));*/
         /*printf("%d  %3d  %6d\n", i, power(2, i), power(-3, i));*/
     /*}*/
-    
+
     printf("%.4f\n", expo(8, 4));
     return 0;
 }
@@ -22,8 +22,8 @@ int main()
 int power(int base, int n)
 {
     int p;
-    
-    for (p = 1; n > 0; --n) 
+
+    for (p = 1; n > 0; --n)
         p = p * base;
     return p;
 }

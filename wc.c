@@ -7,7 +7,7 @@
 int main() {
     double c, nl, nw, nc;
     int state;
-    
+
     nl = nw = nc = 0;
     state = OUT;
     while ((c = getchar()) != EOF) {

@@ -6,7 +6,7 @@ float F2C(float f);
 int main() {
     float fahr, celcius;
     int start, stop, step;
-    
+
     start = 0;  // Start value of temperatures' table.
     stop = 100; // End value of temperatures' table.
     step = 10;  // The difference between successive celcius values.

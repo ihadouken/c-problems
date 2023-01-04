@@ -23,10 +23,10 @@ int closest_triplet_sum(int* arr, int len, int target) {
 
     for (i = 0; i < len - 2; ++i) {
         found_sum = closest_duet_sum(arr + (i+1), len - (i+1), target - arr[i]) + arr[i];
-    
+
         if (abs_val(closest - target) > abs_val(found_sum - target))
             closest = found_sum;
-        
+
         if (closest == target)
             break;
     }

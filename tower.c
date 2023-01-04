@@ -16,10 +16,10 @@ void toh_iter(int ndisks, char from, char to, char extra);
 int main(int argc, char *argv[]) {
     int n = 0;
     int ch;
-    
+
     /* the following line disables automatic argument errors by getopt */
     /*opterr = 0;*/
-    
+
     while ((ch = getopt(argc, argv, "n:")) != EOF) {
         switch (ch) {
             case 'n':

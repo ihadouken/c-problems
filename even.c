@@ -10,8 +10,8 @@ int main(int argc, char** argv) {
     int num;
     num = str2int(argv[1]);
 
-    /* for all even n, int (n+1)/2 will trunicate 
-     * to n/2 
+    /* for all even n, int (n+1)/2 will trunicate
+     * to n/2
      * ex:- 4/2 = 5/2 */
     if (num/2 == (num+1)/2)
         return 1;

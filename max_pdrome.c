@@ -6,7 +6,7 @@ char * max_pdrome(char *str);
 int grow_pdrome(char *str, int len, int *ptr1, int *ptr2);
 
 int main(void) {
-    /* not passing input string 'literally' to 
+    /* not passing input string 'literally' to
      * max_pdrome as it trunicates the overwriting
      * a character with null which produces segfault
      * as the 'literal' string is read-only */
@@ -23,7 +23,7 @@ char * max_pdrome(char *str) {
     beg = end = 0;
     pdrome_len = 1;
     slen = strlen(str);
-    
+
     for (i = 1; i < slen-1; ++i) {
 
         p1 = p2 = i;

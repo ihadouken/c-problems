@@ -10,7 +10,7 @@ int main(void) {
     len = sizeof(nums)/sizeof(nums[0]);
     p1 = 0;
     p2 = len - 1;
-    
+
     find_sum(nums, 70, &p1, &p2);
 
     if (p1 == -1 && p2 == -1)
@@ -28,7 +28,7 @@ void find_sum(int* arr, int target, int* ptr1, int* ptr2) {
             *ptr1 += 1;
         else if (sum > target)
             *ptr2 -= 1;
-        
+
         if (*ptr1 == *ptr2) {
             *ptr1 = *ptr2 = -1;
             break;

@@ -8,7 +8,7 @@ void find_winners(int matches[100000][2], int msize, int stats[2][100000], int *
         loser = matches[i][1];
         loses[loser]++;
     }
-    
+
     for (i = 0; i < msize; ++i) {
         winner = matches[i][0];
         loser = matches[i][1];

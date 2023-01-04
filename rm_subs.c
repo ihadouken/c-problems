@@ -37,7 +37,7 @@ void rm_subs(char str[], char substr[]) {
             subptr = 0;
         }
 
-        /* if a part of string matching with 
+        /* if a part of string matching with
          * part of substring */
         if (str[i] == substr[subptr])
             ++subptr;

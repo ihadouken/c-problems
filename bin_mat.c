@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <math.h>
-/* receive a N*N binary matrix and print its
- * unique rows (madii's request) */
+/* receive a N*N binary matrix and print its unique rows */
 
 /* auxillary fumctions:
- *      1) bin2dec -> converts the binary number stored in array to decimal, returns decimal 
+ *      1) bin2dec -> converts the binary number stored in array to decimal, returns decimal
  *      2) prow -> prints the given row */
 
 int bin2dec(int digits[], int length);
@@ -32,7 +31,7 @@ int main(int argc, char** argv) {
     /* find order */
     order = sqrt(total);
 
-    /* arrays: 
+    /* arrays:
      *     1) 2D array stores matrix
      *     2) stores decimal values of seen rows
     */
@@ -44,7 +43,7 @@ int main(int argc, char** argv) {
     for (i=0; i<order && counter<total; ++i)
         for (j=0; j<order; ++j)
             matrix[i][j] = argv[1][counter++] - '0';
-    
+
     /* selective print of rows */
     counter = 0;
     for (i=0; i<order; ++i) {

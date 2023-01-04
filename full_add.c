@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAXDIGS 22
-/* full adder fumction (recommended by madii) */
+/* full adder fumction */
 
 /* The Workhorse:
  *      accepts two binary strings i.e augend, addend
@@ -10,7 +10,7 @@ char * addBinary(char augend[], char addend[]);
 int main(int argc, char** argv) {
     if (argc != 3)
         return 255;
-    
+
     printf("Input: %s %s\n", argv[1], argv[2]);
     char *ptr = addBinary(argv[1], argv[2]);
     printf("Output: %s\n", ptr);
@@ -41,7 +41,7 @@ char * addBinary(char augend[], char addend[]) {
             /* output carry equal to previous value (preserved in addend string) */
             carry = addend[i];
         }
-        
+
         /* bits inequal */
         else {
             /* sum is opposite to input carry which itself propagates */
@@ -53,7 +53,7 @@ char * addBinary(char augend[], char addend[]) {
                 augend[i] = '1';
         }
     }
-    
+
     /* carry after adding MSBs */
     if (carry == '1') {
         /* shift all digits to right (including null) */

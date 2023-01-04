@@ -9,7 +9,7 @@ int main(void) {
     int i, len = sizeof(arr)/sizeof(arr[0]);
 
     merge_sort(arr, 0, len-1);
-    
+
     for (i = 0; i < len; ++i)
         printf(" %d,", arr[i]);
     return 0;
@@ -33,7 +33,7 @@ void merge(int arr[], int beg, int mid, int end) {
     int n1 = mid - beg + 1;
     int n2 = end - mid;
     int left[n1], right[n2], i, j, k;
-    
+
     for (i = 0; i < n1; ++i)
         left[i] = arr[beg + i];
 
@@ -53,7 +53,7 @@ void merge(int arr[], int beg, int mid, int end) {
 
     while (i < n1)
         arr[k++] = left[i++];
-    
+
     while (j < n2)
         arr[k++] = right[j++];
 }

@@ -10,7 +10,7 @@ int main() {
 
     //for (count = 0; getchar() != EOF; ++count)
     while ((c = getchar()) != EOF)
-        ++count; 
+        ++count;
     printf("No. of characters: %.0f\n", count);
     return 0;
 }

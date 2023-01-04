@@ -5,7 +5,7 @@ void select_sort(int arr[], int size);
 
 int main(void) {
     int n, i;
-    
+
     int arr[] = { 15, 4, 2, 8, 79, 14, 6, 0 };
     n = sizeof(arr)/sizeof(arr[0]);
 
@@ -26,7 +26,7 @@ void select_sort(int arr[], int size) {
             if (arr[min] > arr[j])
                 min = j;
         }
-        
+
         temp = arr[min];
         arr[min] = arr[i];
         arr[i] = temp;

@@ -1,5 +1,5 @@
 #include <stdio.h>
-/* my take on the treasure hunt problem (helping madii) */
+/* my take on the treasure hunt problem */
 
 void parse_clue(int row, int column, int clue, int next_pos[]);
 
@@ -14,7 +14,7 @@ int main() {
         {33, 15, 51, 31, 35},
         {21, 52, 33, 13, 23}
     };
-    
+
     finding = 1;
     column = row = 0;
 

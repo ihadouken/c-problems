@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-/* implements luhn's algorithm to examine the validity of identification numbers (recommended by madii)*/
+/* implements luhn's algorithm to examine the validity of identification numbers */
 
 int main(int argc, char** argv) {
     /* do not proceed if:
@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
         sum += num[j] - '0';
 
     printf("[DEBUG] Checksum: %d\n", sum);
-    
+
     /* invalid (indivisible by 10)*/
     if (sum%10)
         return 1;
