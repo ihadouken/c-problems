@@ -16,8 +16,10 @@ int main(void) {
 
     if (count == 0)
         puts("Valid input.");
-    else
+    else {
         puts("Invalid input.");
+        return 1;
+    }
     return 0;
 }
 

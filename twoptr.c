@@ -11,12 +11,12 @@ int main(void) {
     p1 = 0;
     p2 = len - 1;
 
-    find_sum(nums, 70, &p1, &p2);
+    find_sum(nums, 200, &p1, &p2);
 
     if (p1 == -1 && p2 == -1)
         puts("Sorry, target sum not found :(");
     else
-        fprintf(stdout, "Power couple: %d and %d\n", p1, p2);
+        fprintf(stdout, "Satisfying elements: %d and %d\n", p1, p2);
     return 0;
 }
 
@@ -31,7 +31,7 @@ void find_sum(int* arr, int target, int* ptr1, int* ptr2) {
 
         if (*ptr1 == *ptr2) {
             *ptr1 = *ptr2 = -1;
-            break;
+            return;
         }
     }
 }
