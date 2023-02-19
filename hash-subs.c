@@ -1,6 +1,9 @@
+/* Prepare a list of substrings of a string of given length and computes hash for each. */
+
 #include <stdio.h>
+#include <math.h>
+
 #define MAXCHAR 128
-/* prepares a list of substrings of a string of given length and computes hash for each */
 
 /* hash -> outputs hash for string of given length
  * str2int -> converts numeric strings to integers*/
@@ -43,12 +46,13 @@ int main(int argc, char** argv) {
 int hash(char key[], int len) {
     int i, base, mod, hash;
     base = 31;
-    mod = 1e9 + 9;
+    /* Calculate e^9 */
+    mod = exp(9) + 9;
     hash = 0;
     /*long exp = 1;*/
 
     for (i=0; i<len; ++i) {
-        /* uses horner's method */
+        /* Use horner's method */
         hash = (hash * base + (key[i] - 'a')) % mod;
 
         /*hash = (hash + (key[i] - 'a' + 1) * exp) % mod;*/
